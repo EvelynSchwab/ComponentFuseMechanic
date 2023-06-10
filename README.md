@@ -15,6 +15,10 @@ The following mechanics are included:
 * Snap objects together at the socket and constrain them at the closest sockets, and the supplementary sockets, with a physics-based interp.
 * Detach objects from other "fused" objects (rudimentary)
 
+## Video Showcase
+[![ProjectClip](https://img.youtube.com/vi/eO0NQ3Egu48/maxresdefault.jpg)](https://youtu.be/eO0NQ3Egu48)
+
+
 | Keybind             | Action                                                  |
 | ------------------- | ------------------------------------------------------- |
 | Right Mouse Button  | Enter searching mode                                    |
