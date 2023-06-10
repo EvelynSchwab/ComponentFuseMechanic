@@ -42,6 +42,7 @@ void UFFuseComponent::ReleaseComponent()
 {
 	GetGrabbedComponent()->SetRenderCustomDepth(false);
 	GetGrabbedComponent()->SetReceivesDecals(true);
+	GetGrabbedComponent()->SetCustomPrimitiveDataFloat(0, 0.0f);
 	
 	if (LastSpawnedOrthoProjectionActor) { LastSpawnedOrthoProjectionActor->Destroy(); }
 	
@@ -169,7 +170,7 @@ bool UFFuseComponent::TryGrabTargetedFusable()
 
 	GetGrabbedComponent()->SetRenderCustomDepth(true);
 	GetGrabbedComponent()->SetCustomDepthStencilValue(1);
-	
+	GetGrabbedComponent()->SetCustomPrimitiveDataFloat(0, 1.0f);
 	if (OrthographicProjectionActor)
 	{
 		LastSpawnedOrthoProjectionActor = GetWorld()->SpawnActor<AActor>(OrthographicProjectionActor, GetGrabbedComponent()->GetComponentLocation(), GetOwnerControlRotationYaw());
